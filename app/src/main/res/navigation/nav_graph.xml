@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="kz.just_code.animationapp.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_viewAnimationFragment"
+            app:destination="@id/viewAnimationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAnimationFragment"
+        android:name="kz.just_code.animationapp.ViewAnimationFragment"
+        android:label="ViewAnimationFragment" >
+        <action
+            android:id="@+id/action_viewAnimationFragment_to_sharedStartFragment"
+            app:destination="@id/sharedStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharedStartFragment"
+        android:name="kz.just_code.animationapp.SharedStartFragment"
+        android:label="SharedStartFragment" >
+        <action
+            android:id="@+id/action_sharedStartFragment_to_sharedEndFragment"
+            app:destination="@id/sharedEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharedEndFragment"
+        android:name="kz.just_code.animationapp.SharedEndFragment"
+        android:label="SharedEndFragment" >
+        <action
+            android:id="@+id/action_sharedEndFragment_to_motionFragment"
+            app:destination="@id/motionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/motionFragment"
+        android:name="kz.just_code.animationapp.MotionFragment"
+        android:label="MotionFragment" />
+</navigation>
